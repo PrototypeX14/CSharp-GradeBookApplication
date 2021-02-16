@@ -13,11 +13,11 @@ namespace GradeBook.GradeBooks
 
         public override char GetLetterGrade(double averageGrade)
         {
-            if (Students.Count <= 5)
+            if (Students.Count < 5)
             {
-                throw new InvalidOperationException();
+                throw new InvalidOperationException("Ranked-Grading requires a minimum of 5 students to work.");
             }
-            return 'F'; ;
+            return 'F';
         }
     }
 }
